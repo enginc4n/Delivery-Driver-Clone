@@ -6,8 +6,9 @@ public class Driver : MonoBehaviour
 {
 
 
-    [SerializeField] float rotateSpeed = 0.1f;
-    [SerializeField] float moveSpeed = 0.01f;
+    [SerializeField] float rotateSpeed = 300f;
+    public static float moveSpeed = 15f;
+
     void Start()
     {
 
@@ -20,7 +21,8 @@ public class Driver : MonoBehaviour
 
         float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         transform.Translate(0, moveAmount, 0);
-
     }
+
+
 
 }
